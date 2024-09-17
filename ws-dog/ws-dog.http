@@ -1,0 +1,6 @@
+@ws_dog_HostAddress = http://localhost:5145
+
+GET {{ws_dog_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

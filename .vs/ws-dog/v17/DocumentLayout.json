@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|c:\\users\\alarrea\\desktop\\projects\\ws-dog\\ws-dog\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|solutionrelative:ws-dog\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|c:\\users\\alarrea\\desktop\\projects\\ws-dog\\ws-dog\\src\\controllers\\dogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|solutionrelative:ws-dog\\src\\controllers\\dogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|c:\\users\\alarrea\\desktop\\projects\\ws-dog\\ws-dog\\src\\dto\\dogsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|solutionrelative:ws-dog\\src\\dto\\dogsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|c:\\users\\alarrea\\desktop\\projects\\ws-dog\\ws-dog\\src\\data\\dogscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|solutionrelative:ws-dog\\src\\data\\dogscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|c:\\users\\alarrea\\desktop\\projects\\ws-dog\\ws-dog\\src\\models\\dogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|solutionrelative:ws-dog\\src\\models\\dogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|c:\\users\\alarrea\\desktop\\projects\\ws-dog\\ws-dog\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{646CC247-56F4-420C-AD25-DC9303ADE34B}|ws-dog\\ws-dog.csproj|solutionrelative:ws-dog\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\Program.cs",
+              "RelativeDocumentMoniker": "ws-dog\\Program.cs",
+              "ToolTip": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\Program.cs",
+              "RelativeToolTip": "ws-dog\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T15:52:42.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\appsettings.json",
+              "RelativeDocumentMoniker": "ws-dog\\appsettings.json",
+              "ToolTip": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\appsettings.json",
+              "RelativeToolTip": "ws-dog\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-17T15:51:28.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DogsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\src\\DTO\\DogsDTO.cs",
+              "RelativeDocumentMoniker": "ws-dog\\src\\DTO\\DogsDTO.cs",
+              "ToolTip": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\src\\DTO\\DogsDTO.cs",
+              "RelativeToolTip": "ws-dog\\src\\DTO\\DogsDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T15:46:09.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DogsContext.cs",
+              "DocumentMoniker": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\src\\Data\\DogsContext.cs",
+              "RelativeDocumentMoniker": "ws-dog\\src\\Data\\DogsContext.cs",
+              "ToolTip": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\src\\Data\\DogsContext.cs",
+              "RelativeToolTip": "ws-dog\\src\\Data\\DogsContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T15:43:15.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DogsController.cs",
+              "DocumentMoniker": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\src\\Controllers\\DogsController.cs",
+              "RelativeDocumentMoniker": "ws-dog\\src\\Controllers\\DogsController.cs",
+              "ToolTip": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\src\\Controllers\\DogsController.cs",
+              "RelativeToolTip": "ws-dog\\src\\Controllers\\DogsController.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAQwGkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T15:42:13.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dogs.cs",
+              "DocumentMoniker": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\src\\Models\\Dogs.cs",
+              "RelativeDocumentMoniker": "ws-dog\\src\\Models\\Dogs.cs",
+              "ToolTip": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-dog\\ws-dog\\src\\Models\\Dogs.cs",
+              "RelativeToolTip": "ws-dog\\src\\Models\\Dogs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T15:39:04.414Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
