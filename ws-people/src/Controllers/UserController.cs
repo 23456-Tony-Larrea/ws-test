@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using ws_people.src.Data;
 using ws_people.src.models;
+using ws_people.src.DTO;
 
 namespace ws_people.src.Controllers
 {
@@ -16,39 +17,63 @@ namespace ws_people.src.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Users>>> GetUsers()
-        {
-            return await _context.Users.ToListAsync();
-        }
+       [HttpGet]
+public async Task<ActionResult> GetUsers()
+{
+    try
+    {
+        var users = await _context.Users.ToListAsync();
+        return Ok(new { data = users });
+    }
+    catch (Exception ex)
+    {
+        return StatusCode(500, $"Internal server error: {ex.Message}");
+    }
+}
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Users>> GetUser(int id)
         {
-            var user = await _context.Users.FindAsync(id);
-
-            if (user == null)
+            try
             {
-                return NotFound();
+                var user = await _context.Users.FindAsync(id);
+
+                if (user == null)
+                {
+                    return NotFound(new { message = "Usuario no encontrado" });
+                }
+
+                return user;
             }
-            return user;
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
         [HttpPost]
         public async Task<ActionResult<Users>> PostUser(CreateUserDto createUserDto)
         {
-            var user = new Users
+            try
             {
-                Nombre = createUserDto.Nombre,
-                Apellidos = createUserDto.Apellidos,
-                Estatura = createUserDto.Estatura,
-                Sexo = createUserDto.Sexo
-            };
+                var user = new Users
+                {
+                    Nombre = createUserDto.Nombre,
+                    Apellidos = createUserDto.Apellidos,
+                    Estatura = createUserDto.Estatura,
+                    Sexo = createUserDto.Sexo,
+                    Contraseña = BCrypt.Net.BCrypt.HashPassword(createUserDto.Contraseña)
+                };
 
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+                return CreatedAtAction(nameof(GetUser), new { id = user.Id }, new { message = "Usuario creado con éxito", user });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
         [HttpPut("{id}")]
@@ -56,7 +81,7 @@ namespace ws_people.src.Controllers
         {
             if (id != user.Id)
             {
-                return BadRequest();
+                return BadRequest(new { message = "ID de usuario no coincide" });
             }
 
             _context.Entry(user).State = EntityState.Modified;
@@ -64,35 +89,70 @@ namespace ws_people.src.Controllers
             try
             {
                 await _context.SaveChangesAsync();
+                return Ok(new { message = "Usuario actualizado con éxito" });
             }
             catch (DbUpdateConcurrencyException)
             {
                 if (!UserExists(id))
                 {
-                    return NotFound();
+                    return NotFound(new { message = "Usuario no encontrado" });
                 }
                 else
                 {
-                    throw;
+                    return StatusCode(500, "Error de concurrencia al actualizar el usuario.");
                 }
             }
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
+            try
             {
-                return NotFound();
+                var user = await _context.Users.FindAsync(id);
+                if (user == null)
+                {
+                    return NotFound(new { message = "Usuario no encontrado" });
+                }
+
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+
+                return Ok(new { message = "Usuario eliminado con éxito" });
             }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
 
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
+        [HttpPost("login")]
+        public async Task<IActionResult> Login(LoginUserDTO loginUserDto)
+        {
+            try
+            {
+                var user = await _context.Users.SingleOrDefaultAsync(u => u.Nombre == loginUserDto.Nombre);
 
-            return NoContent();
+                if (user == null)
+                {
+                    return NotFound(new { message = "Usuario no encontrado" });
+                }
+
+                if (!BCrypt.Net.BCrypt.Verify(loginUserDto.Contraseña, user.Contraseña))
+                {
+                    return Unauthorized(new { message = "Credenciales inválidas" });
+                }
+
+                return Ok(new { message = "Login exitoso", user });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
 
         private bool UserExists(int id)
@@ -101,3 +161,20 @@ namespace ws_people.src.Controllers
         }
     }
 }
+
+
+/*CREATE TABLE [dbo].[Users] (
+[Id] INT IDENTITY(1,1) NOT NULL,
+
+[Nombre]     NVARCHAR (255) NULL,
+
+[Apellidos]  NVARCHAR (255) NULL,
+
+[Estatura]   FLOAT (53)     NULL,
+
+[Sexo]       NVARCHAR (50)  NULL,
+
+[Contraseña] NVARCHAR (255) NULL,
+PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+*/

@@ -6,5 +6,7 @@
         public string Apellidos { get; set; }
         public float Estatura { get; set; }
         public string Sexo { get; set; }
+        public string Contraseña { get; set; }
+  
     }
 }

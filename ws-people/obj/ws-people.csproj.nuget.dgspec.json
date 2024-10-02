@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ALARREA\\Desktop\\projects\\ws-people\\ws-people\\ws-people.csproj": {}
+    "C:\\Users\\USER\\Desktop\\grade-pro\\ws-test\\ws-people\\ws-people.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ALARREA\\Desktop\\projects\\ws-people\\ws-people\\ws-people.csproj": {
+    "C:\\Users\\USER\\Desktop\\grade-pro\\ws-test\\ws-people\\ws-people.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-people\\ws-people\\ws-people.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\grade-pro\\ws-test\\ws-people\\ws-people.csproj",
         "projectName": "ws-people",
-        "projectPath": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-people\\ws-people\\ws-people.csproj",
-        "packagesPath": "C:\\Users\\ALARREA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALARREA\\Desktop\\projects\\ws-people\\ws-people\\obj\\",
+        "projectPath": "C:\\Users\\USER\\Desktop\\grade-pro\\ws-test\\ws-people\\ws-people.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\grade-pro\\ws-test\\ws-people\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ALARREA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,6 +46,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -55,6 +63,16 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
@@ -84,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
