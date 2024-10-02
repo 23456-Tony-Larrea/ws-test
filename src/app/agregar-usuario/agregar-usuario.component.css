@@ -1,0 +1,18 @@
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .form-row {
+    display: contents;
+  }
+  
+  .input-field {
+    width: 100%;
+  }
+  
+  button {
+    grid-column: span 2;
+    justify-self: center;
+  }

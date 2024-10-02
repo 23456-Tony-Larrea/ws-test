@@ -1,0 +1,44 @@
+<mat-card class="w-full max-w-4xl mx-auto">
+    <mat-card-header>
+      <mat-card-title class="text-2xl font-bold text-center">{{ isEditMode ? 'Editar Usuario' : 'Agregar Usuario' }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()" class="form-grid">
+        <div class="form-row">
+          <mat-form-field class="input-field">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nombre" required>
+          </mat-form-field>
+          <mat-form-field class="input-field">
+            <mat-label>Apellidos</mat-label>
+            <input matInput type="text" placeholder="Apellidos" name="apellidos" [(ngModel)]="apellidos" required>
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <mat-form-field class="input-field">
+            <mat-label>Estatura (en metros)</mat-label>
+            <input matInput type="number" step="0.01" placeholder="Estatura" name="estatura" [(ngModel)]="estatura" required>
+          </mat-form-field>
+          <mat-form-field class="input-field">
+            <mat-label>Sexo</mat-label>
+            <input matInput type="text" placeholder="Sexo" name="sexo" [(ngModel)]="sexo" required>
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <mat-form-field class="input-field">
+            <mat-label>Contraseña</mat-label>
+            <input matInput type="password" placeholder="Contraseña" name="password" [(ngModel)]="password" [required]="!isEditMode">
+            <mat-icon matSuffix class="custom-icon">lock</mat-icon>
+          </mat-form-field>
+          <mat-form-field class="input-field">
+            <mat-label>Confirmar Contraseña</mat-label>
+            <input matInput type="password" placeholder="Confirmar Contraseña" name="confirmPassword" [(ngModel)]="confirmPassword" [required]="!isEditMode">
+            <mat-icon matSuffix class="custom-icon">lock</mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="form-row">
+          <button mat-raised-button color="primary" type="submit">{{ isEditMode ? 'Actualizar Usuario' : 'Agregar Usuario' }}</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>

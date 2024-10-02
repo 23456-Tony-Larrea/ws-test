@@ -1,0 +1,1 @@
+export const msUsersURL = 'http://localhost:5073/api/Users'

@@ -1,0 +1,59 @@
+<div class="auth-container">
+  <mat-card class="auth-card">
+    <mat-card-content>
+      <div class="avatar-container">
+        <img [src]="imageUrl" alt="login" class="avatar">
+      </div>
+      <form (ngSubmit)="onSubmit()">
+        <mat-form-field class="input-field">
+          <mat-label>Email</mat-label>
+          <input matInput type="text" placeholder="Correo electrónico" name="email" [(ngModel)]="email">
+          <mat-icon matSuffix class="custom-icon">email</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="input-field">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" placeholder="Contraseña" name="password" [(ngModel)]="password">
+          <mat-icon matSuffix class="custom-icon">lock</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="input-field" *ngIf="!isLogin">
+          <mat-label>Confirmar Contraseña</mat-label>
+          <input matInput type="password" placeholder="Confirmar Contraseña" name="confirmPassword" [(ngModel)]="confirmPassword">
+          <mat-icon matSuffix class="custom-icon">lock</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="input-field" *ngIf="!isLogin">
+          <mat-label>Nombre</mat-label>
+          <input matInput type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nombre">
+        </mat-form-field>
+        <mat-form-field class="input-field" *ngIf="!isLogin">
+          <mat-label>Apellidos</mat-label>
+          <input matInput type="text" placeholder="Apellidos" name="apellidos" [(ngModel)]="apellidos">
+        </mat-form-field>
+        <mat-form-field class="input-field" *ngIf="!isLogin">
+          <mat-label>Estatura (en metros)</mat-label>
+          <input matInput type="number" step="0.01" placeholder="Estatura" name="estatura" [(ngModel)]="estatura">
+        </mat-form-field>
+        <div *ngIf="!isLogin">
+          <mat-form-field class="input-field" *ngIf="!isLogin">
+            <mat-label>Sexo</mat-label>
+            <mat-select name="sexo" [(ngModel)]="sexo">
+              <mat-option value="masculino">Masculino</mat-option>
+              <mat-option value="femenino">Femenino</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <mat-card-actions class="center-button">
+          <button mat-raised-button color="primary" type="submit">{{ isLogin ? 'Iniciar sesión' : 'Registrarse' }}</button>
+        </mat-card-actions>
+      </form>
+      <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-clip-rotate-multiple" [fullScreen]="true">
+        <p style="color: white">Cargando...</p>
+      </ngx-spinner>
+      <p class="mt-4 text-center">
+        {{ isLogin ? '¿No tienes una cuenta?' : '¿Ya tienes una cuenta?' }}
+        <button mat-button (click)="toggleForm()" [ngStyle]="{'background-color': 'black', 'color': 'white'}">
+          {{ isLogin ? 'Regístrate' : 'Inicia Sesión' }}
+        </button>
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
